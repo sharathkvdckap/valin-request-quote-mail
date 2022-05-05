@@ -27,17 +27,11 @@ try {
     $mail->addAddress('sharathkv@dckap.com'); 
  
     //Content
-  
-    $name = $_POST['name']; 
-    $company = $_POST['company']; 
-    $email = $_POST['email']; 
-    $phone_no = $_POST['phone_no']; 
-    $partNum = $_POST['partNum']; 
-    $PartQty = $_POST['PartQty'];
     
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Request Quote';
-    $mail->Body    = "'Name:'.$name. '<br>' 'Company:'.$company. '<br>' 'Email:'.$email. '<br>' 'Phone:'.$phone_no. '<br>' 'PartNo:'.$partNum. '<br>' 'PartQty:'.$PartQty."; 
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
     echo 'Message has been sent';
