@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
-$mail->setfrom('sharathkumarv183@gmail.com', 'Sharath');
+$mail->setfrom('sharathkumarv183@gmail.com', 'Sharath', 0);
 $mail->addaddress("sharathkv@dckap.com"); 
 $mail->isHTML(true);
 
