@@ -40,8 +40,13 @@ try {
     $mail->Subject = 'Request Quote';
     $mail->Body    = "'Name:'.$name. '<br>' 'Company:'.$company. '<br>' 'Email:'.$email. '<br>' 'Phone:'.$phone_no. '<br>' 'PartNo:'.$partNum. '<br>' 'PartQty:'.$PartQty."; 
 
-    $mail->send();
-    echo 'Message has been sent';
+    if($mail->send()){
+        echo 'Message has been sent';
+    }
+    else{
+        echo "Something went wrong";
+    }
+    
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
