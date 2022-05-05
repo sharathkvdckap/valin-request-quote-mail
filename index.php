@@ -34,11 +34,11 @@ try {
     $email = $_POST['email']; 
     $phone_no = $_POST['phone_no']; 
     $partNum = $_POST['partNum']; 
-    $PartQty = $_POST['partQty'];
+    $partQty = $_POST['partQty'];
     
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Request Quote';
-    $mail->Body    = "'Name:'.$name. '<br>' 'Company:'.$company. '<br>' 'Email:'.$email. '<br>' 'Phone:'.$phone_no. '<br>' 'PartNo:'.$partNum. '<br>' 'PartQty:'.$PartQty."; 
+    $mail->Body    = "Name:$name <br> Company:$company <br> Email:$email <br> Phone:$phone_no <br> PartNo:$partNum <br> PartQty:$partQty"; 
 
     if($mail->send()){
         echo 'Message has been sent';
@@ -46,7 +46,7 @@ try {
     else{
         echo "Something went wrong";
     }
-    
+
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
