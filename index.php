@@ -38,7 +38,7 @@ try {
     
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Request Quote';
-    $mail->Body    = "Name:$name <br> Company:$company <br> Email:$email <br> Phone:$phone_no <br> PartNo:$partNum <br> PartQty:$partQty"; 
+    $mail->Body    = "Name: $name <br> Company: $company <br> Email: $email <br> Phone: $phone_no <br> PartNo: $partNum <br> PartQty: $partQty"; 
 
     if($mail->send()){
         echo 'Message has been sent';
