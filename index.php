@@ -15,10 +15,6 @@
     // $headers = "Reply-To: ".$_POST['sender_ema‌​il‌​']."\r\n"; 
     $headers = "Content-type: text/html; charset=iso-8859-1\r\n";
     'X-Mailer: PHP/' . phpversion();
-    if(mail($to, $subject, $message, $headers)) 
-    echo 'success'; 
-    else 
-    echo 'Error';
-    exit;
- 
+    mail($to, $subject, $message, $headers);
+  
 ?>
