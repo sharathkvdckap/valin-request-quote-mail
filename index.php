@@ -27,6 +27,7 @@ try {
     $mail->setFrom('sharathkumarv183@gmail.com', 'Sharath');
     $mail->addAddress('sharathkv@dckap.com'); 
     $mail->addAddress('prakashs@dckap.com');
+    $mail->addAddress('balankn@dckap.com');
  
     //Content
   
